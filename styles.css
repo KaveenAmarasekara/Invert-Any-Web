@@ -1,0 +1,57 @@
+html{
+    background-color: blue;
+    margin: 0;
+    padding: 3px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 80px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:burlywood;
+  }
+
+  /* (A) HIDE CHECKBOX */
+  input.tog { display: none; }
+   
+  /* (B) USE LABEL TO BUILD CUSTOM BUTTON */
+  label.tog {
+    display: block;
+    width: 50px; height: 25px; padding: 2px;
+    border-radius: 15px;
+    background: white;
+    cursor: pointer;
+  }
+   
+  /* (C) USE BEFORE TO ADD "INNER SWITCH" */
+  label.tog::before {
+    content: "";
+    display: block; width: 50%; height: 100%;
+    background: black;
+    border-radius: 15px;
+  }
+   
+  /* Change text before */
+  label.tog_text{
+    display: block;
+    font-weight: bold;
+  }
+
+  label.tog_text::before {
+    display: block;
+    content: 'Normal';
+  }
+  
+  /* (D) ON CHECKED */
+  label.tog, label.tog::before { transition: all 0.3s; }
+
+  input.tog:checked + label.tog { background:black; }
+  input.tog:checked + label.tog::before { transform: translateX(100%); background: white; }
+  input.tog:checked + label.tog_text::before { content: 'Inverte'; }
