@@ -16,6 +16,7 @@ A browser extension that inverts colors on web pages and PDFs, including offline
 3. Click **"Load Unpacked"** and select the extension folder
 
 ### Firefox
+[https://addons.mozilla.org/en-US/firefox/addon/invert-any-web/]
 1. Run `node convert_manifest.js` to generate `manifest_firefox.json`
 2. Rename it to `manifest.json`
 3. Open `about:debugging#/runtime/this-firefox`
